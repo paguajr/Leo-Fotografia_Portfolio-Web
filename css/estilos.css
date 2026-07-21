@@ -1,13 +1,143 @@
-.logo {
-    font-size: 2rem;
-    font-weight:bolder;
-    color: #333;
-    text-decoration: none;
+footer {
+    background-color: black
+}
+
+footer h3 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer p {
+    color: #fff;
     text-align: center;
 }
 
+.footer-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-icon {
+    color: #25D366;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #25D366;
+    text-decoration: underline;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 2.5rem 0 1.5rem;
+}
+
+.footer-copy {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+.btn-wpp {
+    color: #fff;
+    background-color: #25D366;
+    width: 20%;
+}
+
+.btn-nav {
+    color: #fff;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight:bolder;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos para el botón de Mail */
+.button-mail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    color: #000 !important;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 220px;
+}
+
+.button-mail:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-mail:active {
+    background-color: #cfcfcf;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón de WhatsApp */
+.button-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: #25D366;
+    color: white !important;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 220px;
+}
+
+/* Estilo para la imagen dentro del botón */
+.button-whatsapp img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    /* Esto convierte los colores de la imagen a blanco. Puedes ajustarlo o eliminarlo según la imagen que uses */
+}
+
+/* Efectos al pasar el ratón por el botón */
+.button-whatsapp:hover {
+    background-color: #1EBE56;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-whatsapp:active {
+    background-color: #169E49;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 #hero {
-    background-image: url("../img/mm253_5_237641-1564165771.jpeg");
+    background-image: url("../img/IMG_5701.JPG");
     background-size: cover;
     background-position: center;
     height: 100vh;
