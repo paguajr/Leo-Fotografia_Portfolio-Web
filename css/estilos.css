@@ -1,0 +1,14 @@
+.logo {
+    font-size: 2rem;
+    font-weight:bolder;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+}
+
+#hero {
+    background-image: url("../img/mm253_5_237641-1564165771.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
