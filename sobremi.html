@@ -35,18 +35,49 @@
     </div>
 
     <main>
-        <section class="container" id="sobreMi">
-            <div class="row justify-content-center py-5">
-                <div class="col-md-6">
+        <section class="container py-5" id="sobreMi">
+            <div class="row justify-content-center">
+                <div class="col-md-6 fade-in-scroll">
                     <h1>SOBRE MI</h1>
                     <p>Soy Leonardo Nuñez, tengo 21 años y hace más de cuatro años que me dedico a la fotografía social. Siempre sentí una gran pasión por capturar momentos reales y convertirlos en recuerdos que perduren para toda la vida.</p>
                     <p>Disfruto documentar cada historia de una forma natural, prestando atención a las emociones, los detalles y a todo aquello que hace único cada evento. Mi mayor satisfacción es que, al volver a ver sus fotos, cada pareja o familia pueda revivir ese día tal como lo sintió.</p>
                     <p><strong>Porque los momentos pasan, pero los recuerdos pueden durar para siempre.</strong></p>
                 </div>
-                <figure class="col-md-3 text-center">
+                <figure class="col-md-3 text-center fade-in-scroll">
                     <img class="img-fluid mx-auto d-block" src="img/IMG_5636 1.png" alt="Leonardo Nuñez posando con una camara en las manos y sonriendo">
                 </figure>
             </div>
+            <div class="row justify-content-center">
+                <div id="carruselServicios" class="carousel slide col-md-9" data-bs-ride="carousel" data-bs-interval="3500">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carruselServicios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carruselServicios" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carruselServicios" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carruselServicios" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/carrusel1.jpg" class="d-block w-100" alt="Foto de evento 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carrusel2.jpg" class="d-block w-100" alt="Foto de evento 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carrusel3.jpg" class="d-block w-100" alt="Foto de evento 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carrusel4.jpg" class="d-block w-100" alt="Foto de evento 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselServicios" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselServicios" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
         </section>
     </main>
 
@@ -93,6 +124,7 @@
     </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scroll-reveal.js"></script>
 </body>
 
 </html>

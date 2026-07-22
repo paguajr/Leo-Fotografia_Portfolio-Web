@@ -1,0 +1,13 @@
+General:
+Definir tipografias, estilos y jerarquias
+Crear mas de un template de scroll reveal cambiando el valor de transform en css
+Aplicar animaciones
+
+Header:
+Botones: definir estilos
+Achicar tamaño de los Botones
+
+Footer:
+¿¿¿Quitar subrayado a Botones??
+estilos
+
