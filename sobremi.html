@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Nuñez - Fotografía</title>
+    <meta name="description"
+        content="Pagina web portfolio para Leonardo Nuñez fotografo profesional de eventos, cumpleaños de 15 y casamientos">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="heroSobreMi">
+        <header class="container">
+            <nav class="row justify-content-between align-items-center py-3">
+                <div class="col-md-4">
+                    <div class="row justify-content-between align-items-center">
+                        <a class="btn" href="">
+                            <h1 class="logo">LEONARDO NUÑEZ</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row justify-content-between align-items-center">
+                        <a class="col-md-4 text-center btn btn-nav" href="index.html">SERVICIOS</a>
+                        <a class="col-md-4 text-center btn btn-nav" href="">SOBRE MI</a>
+                        <a class="col-md-4 text-center btn btn-nav" href="#contacto">CONTACTO</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="container" id="sobreMi">
+            <div class="row justify-content-center py-5">
+                <div class="col-md-6">
+                    <h1>SOBRE MI</h1>
+                    <p>Soy Leonardo Nuñez, tengo 21 años y hace más de cuatro años que me dedico a la fotografía social. Siempre sentí una gran pasión por capturar momentos reales y convertirlos en recuerdos que perduren para toda la vida.</p>
+                    <p>Disfruto documentar cada historia de una forma natural, prestando atención a las emociones, los detalles y a todo aquello que hace único cada evento. Mi mayor satisfacción es que, al volver a ver sus fotos, cada pareja o familia pueda revivir ese día tal como lo sintió.</p>
+                    <p><strong>Porque los momentos pasan, pero los recuerdos pueden durar para siempre.</strong></p>
+                </div>
+                <figure class="col-md-3 text-center">
+                    <img class="img-fluid mx-auto d-block" src="img/IMG_5636 1.png" alt="Leonardo Nuñez posando con una camara en las manos y sonriendo">
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid" id="contacto">
+        <div class="container py-5">
+            <div class="row justify-content-center align-items-center gy-4">
+                <div class="col-12 col-md-5 text-center text-md-start">
+                    <h3>Contacto</h3>
+                    <p class="footer-subtitle">¿Tenés un evento en mente? Escribime y coordinamos todo.</p>
+                </div>
+
+                <div class="col-12 col-md-7">
+                    <div class="row justify-content-center gy-3 gx-3">
+                        <div class="col-12 col-md-6 footer-item">
+                            <a href="mailto:leonunez@gmail.com" class="button-mail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                                Enviar Mail
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-md-6 footer-item">
+                            <a href="https://wa.me/5491112345678" class="button-whatsapp" target="_blank" rel="noopener">
+                                <img src="img/whatsapp-white-icon.png.webp" alt="WhatsApp"> Enviar Mensaje
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row justify-content-center text-center">
+                <div class="col-12">
+                    <p class="footer-copy mb-0">&copy; <span id="anio"></span> Leonardo Nuñez Fotografía. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('anio').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
