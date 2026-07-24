@@ -1,4 +1,312 @@
+/* ============================
+   Variables de marca
+   ============================ */
+:root {
+    --negro: #141210;
+    --negro-suave: #1c1a17;
+    --crema: #F3EEE6;
+    --crema-suave: #EAE3D6;
+    --dorado: #B08D57;
+    --dorado-claro: #C9A876;
+    --texto-secundario: #8a8377;
+    --whatsapp: #25D366;
+    --font-titulo: 'Cormorant Garamond', 'Georgia', serif;
+    --font-cuerpo: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-cuerpo);
+    background-color: var(--crema);
+    color: var(--negro);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-titulo);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ============================
+   Header / Nav
+   ============================ */
+.logo {
+    font-family: var(--font-titulo);
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--crema);
+    text-transform: uppercase;
+}
+
+.btn-nav {
+    color: var(--crema);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.btn-nav::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 2px;
+    height: 1px;
+    background: var(--dorado);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s ease;
+}
+
+.btn-nav:hover {
+    color: var(--dorado-claro);
+}
+
+.btn-nav:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ============================
+   Hero
+   ============================ */
+#hero {
+    background-image: linear-gradient(180deg, rgba(20,18,16,0.55) 0%, rgba(20,18,16,0.25) 45%, rgba(20,18,16,0.75) 100%), url("../img/IMG_5701.JPG");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.hero-content .eyebrow {
+    color: var(--dorado-claro);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+    animation: subirYAparecer 0.9s ease-out 0.2s forwards;
+}
+
+.hero-content h1.hero-title {
+    color: var(--crema);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: subirYAparecer 0.9s ease-out 0.4s forwards;
+}
+
+.hero-content p.hero-sub {
+    color: rgba(243, 238, 230, 0.75);
+    font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    opacity: 0;
+    animation: subirYAparecer 0.9s ease-out 0.6s forwards;
+}
+
+.hero-content .btn-hero {
+    opacity: 0;
+    animation: subirYAparecer 0.9s ease-out 0.8s forwards;
+}
+
+@keyframes subirYAparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-dorado {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 1px solid var(--dorado);
+    color: var(--crema);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.btn-dorado:hover {
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.scroll-cue {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: rgba(243, 238, 230, 0.6);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: rebote 2.2s ease-in-out infinite;
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* ============================
+   Servicios
+   ============================ */
+#servicios {
+    padding: 6rem 0 5rem;
+}
+
+.servicios-eyebrow {
+    display: block;
+    text-align: center;
+    color: var(--dorado);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+#servicios h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: var(--negro);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.servicio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 3 / 4;
+    cursor: pointer;
+    background-color: var(--negro);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.servicio-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.7);
+}
+
+.servicio-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(20,18,16,0.85) 100%);
+}
+
+.servicio-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.75rem;
+    z-index: 2;
+    transform: translateY(8px);
+    transition: transform 0.4s ease;
+}
+
+.servicio-card:hover .servicio-info {
+    transform: translateY(0);
+}
+
+.servicio-info h3 {
+    color: var(--crema);
+    font-size: 1.6rem;
+    margin-bottom: 0.35rem;
+}
+
+.servicio-info p {
+    color: rgba(243, 238, 230, 0.75);
+    font-size: 0.85rem;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.servicio-card:hover .servicio-info p {
+    max-height: 60px;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    #servicios {
+        padding: 4rem 0 3rem;
+    }
+}
+
+/* ============================
+   Sobre mi
+   ============================ */
+#heroSobreMi {
+    background-color: var(--negro);
+    padding-bottom: 1px;
+}
+
+#sobreMi {
+    padding: 5rem 0 3rem;
+}
+
+#sobreMi h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 1.5rem;
+    color: var(--negro);
+}
+
+#sobreMi p {
+    color: #4a463e;
+    line-height: 1.8;
+    font-size: 1.02rem;
+    margin-bottom: 1.25rem;
+}
+
+#sobreMi figure img {
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(20,18,16,0.15);
+}
+
 /* Carrusel de servicios (Bootstrap) */
+#carruselServicios {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 #carruselServicios .carousel-item img {
     width: 100%;
     height: 480px;
@@ -15,7 +323,7 @@
 }
 
 #carruselServicios .carousel-indicators button {
-    background-color: #fff;
+    background-color: var(--dorado);
 }
 
 @media (max-width: 768px) {
@@ -24,26 +332,31 @@
     }
 }
 
+/* ============================
+   Footer
+   ============================ */
 footer {
-    background-color: black
+    background-color: var(--negro);
 }
 
 footer h3 {
-    color: #fff;
+    color: var(--crema);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
 }
 
 footer p {
-    color: #fff;
+    color: var(--crema);
     text-align: center;
 }
 
 .footer-subtitle {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(243, 238, 230, 0.6);
     font-size: 0.95rem;
     margin-top: 0.5rem;
+    font-family: var(--font-cuerpo);
 }
 
 .footer-item {
@@ -54,132 +367,105 @@ footer p {
     gap: 0.5rem;
 }
 
-.footer-icon {
-    color: #25D366;
-}
-
 footer a {
-    color: #fff;
+    color: var(--crema);
     text-decoration: none;
 }
 
-footer a:hover {
-    color: #25D366;
-    text-decoration: underline;
-}
-
 .footer-divider {
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(243, 238, 230, 0.12);
     margin: 2.5rem 0 1.5rem;
 }
 
 .footer-copy {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.85rem;
+    color: rgba(243, 238, 230, 0.4);
+    font-size: 0.8rem;
+    font-family: var(--font-cuerpo);
 }
 
-.btn-wpp {
-    color: #fff;
-    background-color: #25D366;
-    width: 20%;
-}
-
-.btn-nav {
-    color: #fff;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight:bolder;
-    text-decoration: none;
-    text-align: center;
-    color: #fff;
-}
-
-/* Estilos para el botón de Mail */
+/* Botón de Mail */
 .button-mail {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 16px;
-    background-color: #ffffff;
-    color: #000 !important;
-    font-size: 15px;
-    font-weight: bold;
+    padding: 11px 20px;
+    background-color: transparent;
+    border: 1px solid var(--dorado);
+    color: var(--crema) !important;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     width: 100%;
     max-width: 220px;
 }
 
 .button-mail:hover {
-    background-color: #e0e0e0;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-color: var(--dorado);
+    color: var(--negro) !important;
 }
 
-.button-mail:active {
-    background-color: #cfcfcf;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para el botón de WhatsApp */
+/* Botón de WhatsApp */
 .button-whatsapp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 16px;
-    background-color: #25D366;
+    padding: 11px 20px;
+    background-color: var(--whatsapp);
     color: white !important;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 220px;
 }
 
-/* Estilo para la imagen dentro del botón */
 .button-whatsapp img {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     margin-right: 10px;
-    /* Esto convierte los colores de la imagen a blanco. Puedes ajustarlo o eliminarlo según la imagen que uses */
 }
 
-/* Efectos al pasar el ratón por el botón */
 .button-whatsapp:hover {
     background-color: #1EBE56;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
 }
 
 .button-whatsapp:active {
     background-color: #169E49;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* ============================
+   Animaciones de scroll
+   ============================ */
 .fade-in-scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-#hero {
-    background-image: url("../img/IMG_5701.JPG");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.fade-in-scroll.stagger-1 { transition-delay: 0.1s; }
+.fade-in-scroll.stagger-2 { transition-delay: 0.2s; }
+.fade-in-scroll.stagger-3 { transition-delay: 0.3s; }
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-#heroSobreMi {
-    background-color: #000;
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
 }

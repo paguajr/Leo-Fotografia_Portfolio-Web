@@ -8,6 +8,9 @@
     <title>Leo Nuñez - Fotografía</title>
     <meta name="description"
         content="Pagina web portfolio para Leonardo Nuñez fotografo profesional de eventos, cumpleaños de 15 y casamientos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -32,14 +35,44 @@
                 </div>
             </nav>
         </header>
+
+        <div class="hero-content">
+            <span class="eyebrow">Fotografía social</span>
+            <h1 class="hero-title">Momentos que <br>merecen quedar</h1>
+            <p class="hero-sub">Cumpleaños, casamientos y eventos, contados con una mirada natural y atenta a los detalles.</p>
+            <a href="#servicios" class="btn-dorado">Ver servicios</a>
+        </div>
+
+        <div class="scroll-cue">Scroll</div>
     </div>
 
     <main>
         <section id="servicios" class="container">
-            <h2 class="text-center m-3">CUMPLEAÑOS - CASAMIENTOS - EVENTOS</h2>
-            <article>
-                <h3>Casamientos</h3>
-            </article>
+            <span class="servicios-eyebrow">Lo que hago</span>
+            <h2>Cumpleaños · Casamientos · Eventos</h2>
+            <div class="servicios-grid">
+                <article class="servicio-card fade-in-scroll">
+                    <img src="img/carrusel3.jpg" alt="Fotografía de casamiento">
+                    <div class="servicio-info">
+                        <h3>Casamientos</h3>
+                        <p>Cobertura completa del día, desde los preparativos hasta la fiesta.</p>
+                    </div>
+                </article>
+                <article class="servicio-card fade-in-scroll stagger-1">
+                    <img src="img/carrusel1.jpg" alt="Fotografía de cumpleaños de 15">
+                    <div class="servicio-info">
+                        <h3>15 años</h3>
+                        <p>Sesión de fotos y cobertura de la fiesta, con toda su energía.</p>
+                    </div>
+                </article>
+                <article class="servicio-card fade-in-scroll stagger-2">
+                    <img src="img/carrusel2.jpg" alt="Fotografía de eventos">
+                    <div class="servicio-info">
+                        <h3>Eventos</h3>
+                        <p>Cumpleaños, reuniones y celebraciones de cualquier tipo.</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 

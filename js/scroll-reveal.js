@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const elementos = document.querySelectorAll(".fade-in-scroll");
+  const elementos = document.querySelectorAll(".fade-in-scroll, .fade-in-left");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
