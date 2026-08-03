@@ -109,28 +109,62 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
     z-index: 0;
 }
 
-#hero::before {
-    content: '';
+/* Partículas flotantes doradas, sutiles, dentro del hero */
+.particulas {
     position: absolute;
     inset: 0;
-    z-index: -1;
-    background-image: linear-gradient(120deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.08) 20%,
-        rgba(255,255,255,0) 40%,
-        rgba(255,255,255,0.08) 60%,
-        rgba(255,255,255,0) 80%,
-        rgba(255,255,255,0.08) 100%);
-    background-size: 250% 250%;
-    animation: moverGradienteOscuro 40s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
 }
 
-@keyframes moverGradienteOscuro {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+.particula {
+    position: absolute;
+    bottom: -5%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--dorado-claro);
+    opacity: 0;
+    animation-name: flotarParticula;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.particula:nth-child(3n) {
+    width: 3px;
+    height: 3px;
+}
+
+.particula:nth-child(5n) {
+    width: 5px;
+    height: 5px;
+    background-color: var(--dorado);
+}
+
+@keyframes flotarParticula {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    3% {
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(15px, -50vh);
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(-10px, -105vh);
+        opacity: 0;
+    }
 }
 
 .hero-content {
@@ -141,6 +175,8 @@ h1, h2, h3, h4 {
     justify-content: center;
     text-align: center;
     padding: 0 1.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content .eyebrow {
@@ -531,22 +567,6 @@ h1, h2, h3, h4 {
     z-index: 0;
 }
 
-#heroSobreMi::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image: linear-gradient(120deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.1) 20%,
-        rgba(255,255,255,0) 40%,
-        rgba(255,255,255,0.1) 60%,
-        rgba(255,255,255,0) 80%,
-        rgba(255,255,255,0.1) 100%);
-    background-size: 250% 250%;
-    animation: moverGradienteOscuro 70s linear infinite;
-}
-
 .sobremi-hero-content {
     max-width: 900px;
     margin: 0 auto;
@@ -664,22 +684,6 @@ footer {
     position: relative;
     overflow: hidden;
     z-index: 0;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image: linear-gradient(120deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.1) 20%,
-        rgba(255,255,255,0) 40%,
-        rgba(255,255,255,0.1) 60%,
-        rgba(255,255,255,0) 80%,
-        rgba(255,255,255,0.1) 100%);
-    background-size: 250% 250%;
-    animation: moverGradienteOscuro 70s linear infinite;
 }
 
 footer h3 {
@@ -843,10 +847,12 @@ footer a {
 /* Respeta la preferencia de movimiento reducido del sistema */
 @media (prefers-reduced-motion: reduce) {
     body::before,
-    #hero::before,
-    #heroSobreMi::before,
     #servicios::before,
-    footer::before {
+    .particula {
         animation: none;
+    }
+
+    .particulas {
+        display: none;
     }
 }
