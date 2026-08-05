@@ -8,6 +8,8 @@
     --crema-suave: #EAE3D6;
     --dorado: #B08D57;
     --dorado-claro: #C9A876;
+    --azul: #1E5C8A;
+    --azul-claro: #3B82C4;
     --texto-secundario: #8a8377;
     --whatsapp: #25D366;
     --font-titulo: 'Fraunces', 'Georgia', serif;
@@ -58,12 +60,12 @@ h1, h2, h3, h4 {
     letter-spacing: 3px;
     text-decoration: none;
     text-align: center;
-    color: var(--crema);
+    color: var(--negro);
     text-transform: uppercase;
 }
 
 .btn-nav {
-    color: var(--crema);
+    color: var(--negro);
     font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -79,15 +81,15 @@ h1, h2, h3, h4 {
     left: 10px;
     right: 10px;
     bottom: 2px;
-    height: 1px;
-    background: var(--dorado);
+    height: 2px;
+    background: var(--azul);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.35s ease;
 }
 
 .btn-nav:hover {
-    color: var(--dorado-claro);
+    color: var(--azul);
 }
 
 .btn-nav:hover::after {
@@ -100,8 +102,8 @@ h1, h2, h3, h4 {
    ============================ */
 #hero {
      background-image: 
-        radial-gradient(ellipse at center, rgba(20,18,16,0.7) 0%, rgba(20,18,16,0.8) 60%, rgba(20,18,16,0.75) 100%),
-        url("../img/IMG_5701.JPG");
+        radial-gradient(ellipse at center, rgba(243,238,230,0.55) 0%, rgba(243,238,230,0.7) 60%, rgba(243,238,230,0.6) 100%),
+        url("../img/IMG_5701_2.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -113,7 +115,7 @@ h1, h2, h3, h4 {
     z-index: 0;
 }
 
-/* Partículas flotantes doradas, sutiles, dentro del hero */
+/* Partículas flotantes azules, sutiles, dentro del hero */
 .particulas {
     position: absolute;
     inset: 0;
@@ -128,7 +130,7 @@ h1, h2, h3, h4 {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background-color: var(--dorado-claro);
+    background-color: var(--azul-claro);
     opacity: 0;
     animation-name: flotarParticula;
     animation-timing-function: ease-in-out;
@@ -144,7 +146,7 @@ h1, h2, h3, h4 {
 .particula:nth-child(5n) {
     width: 5px;
     height: 5px;
-    background-color: var(--dorado);
+    background-color: var(--azul);
 }
 
 @keyframes flotarParticula {
@@ -153,13 +155,13 @@ h1, h2, h3, h4 {
         opacity: 0;
     }
     3% {
-        opacity: 0.5;
+        opacity: 0.85;
     }
     50% {
         transform: translate(15px, -50vh);
     }
     90% {
-        opacity: 0.4;
+        opacity: 0.7;
     }
     100% {
         transform: translate(-10px, -105vh);
@@ -180,8 +182,9 @@ h1, h2, h3, h4 {
 }
 
 .hero-content .eyebrow {
-    color: var(--dorado-claro);
+    color: var(--azul);
     font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 1.25rem;
@@ -190,7 +193,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-content h1.hero-title {
-    color: white;
+    color: var(--negro);
     font-size: clamp(2rem, 6vw, 3.5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -198,11 +201,11 @@ h1, h2, h3, h4 {
     font-family: var(--font-titulo);
     font-weight: 600;
     animation: subirYAparecer 0.9s ease-out 0.4s forwards;
-    text-shadow: 0 4px 40px rgba(0,0,0,0.8), 0 2px 10px rgba(0,0,0,1), 0 0 60px rgba(0,0,0,1);
+    text-shadow: 0 2px 20px rgba(243,238,230,0.8), 0 1px 6px rgba(243,238,230,0.9);
 }
 
 .hero-content p.hero-sub {
-    color: rgba(243, 238, 230, 0.75);
+    color: rgba(20, 18, 16, 0.75);
     font-size: 1rem;
     max-width: 480px;
     margin: 0 auto 2rem;
@@ -223,9 +226,10 @@ h1, h2, h3, h4 {
 .btn-dorado {
     display: inline-block;
     padding: 12px 32px;
-    border: 1px solid var(--dorado);
-    color: var(--crema);
+    border: 2px solid var(--azul);
+    color: var(--azul);
     font-size: 0.8rem;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
@@ -234,14 +238,14 @@ h1, h2, h3, h4 {
 }
 
 .btn-dorado:hover {
-    background-color: var(--dorado);
-    color: var(--negro);
+    background-color: var(--azul);
+    color: var(--crema);
 }
 
 .scroll-cue {
     text-align: center;
     padding-bottom: 2rem;
-    color: rgba(243, 238, 230, 0.6);
+    color: rgba(20, 18, 16, 0.5);
     font-size: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -560,7 +564,7 @@ h1, h2, h3, h4 {
    Sobre mi
    ============================ */
 #heroSobreMi {
-    background-color: var(--negro);
+    background-color: var(--crema);
     padding-bottom: 3rem;
     position: relative;
     overflow: hidden;
@@ -594,7 +598,7 @@ h1, h2, h3, h4 {
 
 .sobremi-hero-text .eyebrow {
     display: block;
-    color: var(--dorado-claro);
+    color: var(--azul);
     font-size: 0.75rem;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -602,7 +606,7 @@ h1, h2, h3, h4 {
 }
 
 .sobremi-hero-text h1 {
-    color: var(--crema);
+    color: var(--negro);
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     margin: 0;
 }
@@ -625,7 +629,7 @@ h1, h2, h3, h4 {
 .sobremi-texto .sobremi-destacada {
     font-family: var(--font-titulo);
     font-size: clamp(1.5rem, 3vw, 2rem);
-    color: var(--dorado);
+    color: var(--azul);
     line-height: 1.4;
     margin-top: 2.5rem;
     margin-bottom: 0;
@@ -655,7 +659,7 @@ h1, h2, h3, h4 {
 }
 
 #carruselServicios .carousel-indicators button {
-    background-color: var(--dorado);
+    background-color: var(--azul);
 }
 
 @media (max-width: 768px) {
@@ -680,14 +684,14 @@ h1, h2, h3, h4 {
    Footer
    ============================ */
 footer {
-    background-color: var(--negro);
+    background-color: var(--crema);
     position: relative;
     overflow: hidden;
     z-index: 0;
 }
 
 footer h3 {
-    color: var(--crema);
+    color: var(--negro);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -695,12 +699,12 @@ footer h3 {
 }
 
 footer p {
-    color: var(--crema);
+    color: var(--negro);
     text-align: center;
 }
 
 .footer-subtitle {
-    color: rgba(243, 238, 230, 0.6);
+    color: rgba(20, 18, 16, 0.6);
     font-size: 0.95rem;
     margin-top: 0.5rem;
     font-family: var(--font-cuerpo);
@@ -715,17 +719,17 @@ footer p {
 }
 
 footer a {
-    color: var(--crema);
+    color: var(--negro);
     text-decoration: none;
 }
 
 .footer-divider {
-    border-color: rgba(243, 238, 230, 0.12);
+    border-color: rgba(20, 18, 16, 0.12);
     margin: 2.5rem 0 1.5rem;
 }
 
 .footer-copy {
-    color: rgba(243, 238, 230, 0.4);
+    color: rgba(20, 18, 16, 0.4);
     font-size: 0.8rem;
     font-family: var(--font-cuerpo);
 }
@@ -738,8 +742,8 @@ footer a {
     gap: 8px;
     padding: 11px 20px;
     background-color: transparent;
-    border: 1px solid var(--dorado);
-    color: var(--crema) !important;
+    border: 2px solid var(--azul);
+    color: var(--negro) !important;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -751,8 +755,8 @@ footer a {
 }
 
 .button-mail:hover {
-    background-color: var(--dorado);
-    color: var(--negro) !important;
+    background-color: var(--azul);
+    color: var(--crema) !important;
 }
 
 /* Botón de WhatsApp */
@@ -768,7 +772,7 @@ footer a {
     letter-spacing: 0.5px;
     text-decoration: none;
     border-radius: 50px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     width: 100%;
     max-width: 220px;
 }
@@ -782,10 +786,12 @@ footer a {
 .button-whatsapp:hover {
     background-color: #1EBE56;
     box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    transform: translateY(-2px);
 }
 
 .button-whatsapp:active {
     background-color: #169E49;
+    transform: translateY(0);
 }
 
 /* ============================
@@ -801,7 +807,7 @@ footer a {
 
     #hero > header,
     #heroSobreMi > header {
-        border-bottom: 1px solid rgba(243, 238, 230, 0.15);
+        border-bottom: 1px solid rgba(20, 18, 16, 0.12);
     }
 
     #servicios.container,
